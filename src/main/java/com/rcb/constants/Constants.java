@@ -2,6 +2,6 @@ package com.rcb.constants;
 
 public interface Constants {
 
-	String RcbTeamJsonFileLocation = ".\\RCB_Team\\src\\main\\resources\\teaminfo.json";
+	String RcbTeamJsonFileLocation = "src/main/resources/teaminfo.json";
 
 }

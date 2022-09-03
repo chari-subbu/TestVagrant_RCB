@@ -12,7 +12,7 @@ import com.rcb.constants.Constants;
 
 public interface JsonFileReader {
 
-	public static JSONObject getCredsJsonObject()
+	public static JSONObject getTeamInfo()
 	{
 		JSONParser jsonParser = new JSONParser();
 		FileReader reader = null;
