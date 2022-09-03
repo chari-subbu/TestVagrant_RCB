@@ -6,6 +6,7 @@
       <class name="com.rcbteam.runners.TC_001_ValidateForeignPlayersInTeam">
         <methods>
           <include name="validateTeamToHaveOnly4Foreigners"/>
+          <include name="validateTeamToHave11Members"/>
         </methods>
       </class> <!-- com.rcbteam.runners.TC_001_ValidateForeignPlayersInTeam -->
     </classes>

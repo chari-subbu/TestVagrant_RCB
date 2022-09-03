@@ -2,22 +2,56 @@ package com.rcbteam.runners;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
-import com.rcb.helpers.JsonFileReader;
+import com.rcb.customexceptons.TeamException;
 
-public class TC_001_ValidateForeignPlayersInTeam {
+public class TC_001_ValidateForeignPlayersInTeam extends TC_000_ValidateTeamMembers{
 
-	@Test
+
+	@Test(dependsOnMethods= {"validateTeamToHave11Members"})
 	public void validateTeamToHaveOnly4Foreigners()
 	{
-		SoftAssert softassert = new SoftAssert();
-
-		JSONObject teamInformation = JsonFileReader.getTeamInfo();
 		JSONArray teamList = (JSONArray) teamInformation.get("player");
 
-		softassert.assertTrue(teamList.size()==11);
+		int foreignPlayers = 0;
+
+		for(Object teamMember : teamList)
+		{
+			JSONObject memberInfo = (JSONObject)teamMember;
+
+			String CountryOfPlayer = memberInfo.get("country").toString().toLowerCase().trim();
+
+			if(!CountryOfPlayer.equals("india"))
+			{
+				foreignPlayers++;
+			}
+		}
+
+		System.out.println("Foreign Players count : "+foreignPlayers);
+
+		try
+		{
+			Assert.assertTrue(foreignPlayers == 4);
+		}
+		catch(AssertionError error)
+		{
+			if(foreignPlayers > 4)
+			{
+				int removePlayers = foreignPlayers-4;
+				throw new TeamException("Team is filled with "+foreignPlayers+" Foreign players, please remove "+removePlayers +" foreign players to match with 4 foreigns");
+			}
+			else
+			{
+				int addPlayers = 4-foreignPlayers;
+				throw new TeamException("Team is filled with "+foreignPlayers+" Foreign players, please add "+addPlayers +" foreign players to match with 4 foreigns");
+			}
+		}
+		catch(Exception excp)
+		{
+			excp.printStackTrace();
+		}
 
 	}
 
