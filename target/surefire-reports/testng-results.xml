@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="34" started-at="2022-09-03T15:24:51Z" finished-at="2022-09-03T15:24:51Z">
+  <suite name="Suite" duration-ms="39" started-at="2022-09-03T15:35:47Z" finished-at="2022-09-03T15:35:47Z">
     <groups>
     </groups>
-    <test name="ValidateAtleastOneWicketKeeper" duration-ms="32" started-at="2022-09-03T15:24:51Z" finished-at="2022-09-03T15:24:51Z">
+    <test name="ValidateAtleastOneWicketKeeper" duration-ms="39" started-at="2022-09-03T15:35:47Z" finished-at="2022-09-03T15:35:47Z">
       <class name="com.rcbteam.runners.TC_002_ValidateWicketKeeper">
-        <test-method status="PASS" signature="validateTeamToHave11Members()[pri:0, instance:com.rcbteam.runners.TC_002_ValidateWicketKeeper@6646153]" name="validateTeamToHave11Members" duration-ms="7" started-at="2022-09-03T15:24:51Z" finished-at="2022-09-03T15:24:51Z">
+        <test-method status="PASS" signature="validateTeamToHave11Members()[pri:0, instance:com.rcbteam.runners.TC_002_ValidateWicketKeeper@6646153]" name="validateTeamToHave11Members" duration-ms="9" started-at="2022-09-03T15:35:47Z" finished-at="2022-09-03T15:35:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateTeamToHave11Members -->
-        <test-method status="PASS" signature="validateTeamAtlease1WicketKeeper()[pri:0, instance:com.rcbteam.runners.TC_002_ValidateWicketKeeper@6646153]" name="validateTeamAtlease1WicketKeeper" duration-ms="0" started-at="2022-09-03T15:24:51Z" depends-on-methods="com.rcbteam.runners.TC_000_ValidateTeamMembers.validateTeamToHave11Members" finished-at="2022-09-03T15:24:51Z">
+        <test-method status="PASS" signature="validateTeamAtlease1WicketKeeper()[pri:0, instance:com.rcbteam.runners.TC_002_ValidateWicketKeeper@6646153]" name="validateTeamAtlease1WicketKeeper" duration-ms="0" started-at="2022-09-03T15:35:47Z" depends-on-methods="com.rcbteam.runners.TC_000_ValidateTeamMembers.validateTeamToHave11Members" finished-at="2022-09-03T15:35:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateTeamAtlease1WicketKeeper -->
       </class> <!-- com.rcbteam.runners.TC_002_ValidateWicketKeeper -->
     </test> <!-- ValidateAtleastOneWicketKeeper -->
-    <test name="Validate4ForeignPlayers" duration-ms="34" started-at="2022-09-03T15:24:51Z" finished-at="2022-09-03T15:24:51Z">
+    <test name="Validate4ForeignPlayers" duration-ms="39" started-at="2022-09-03T15:35:47Z" finished-at="2022-09-03T15:35:47Z">
       <class name="com.rcbteam.runners.TC_001_ValidateForeignPlayersInTeam">
-        <test-method status="PASS" signature="validateTeamToHave11Members()[pri:0, instance:com.rcbteam.runners.TC_001_ValidateForeignPlayersInTeam@2c34f934]" name="validateTeamToHave11Members" duration-ms="7" started-at="2022-09-03T15:24:51Z" finished-at="2022-09-03T15:24:51Z">
+        <test-method status="PASS" signature="validateTeamToHave11Members()[pri:0, instance:com.rcbteam.runners.TC_001_ValidateForeignPlayersInTeam@2c34f934]" name="validateTeamToHave11Members" duration-ms="9" started-at="2022-09-03T15:35:47Z" finished-at="2022-09-03T15:35:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateTeamToHave11Members -->
-        <test-method status="PASS" signature="validateTeamToHaveOnly4Foreigners()[pri:0, instance:com.rcbteam.runners.TC_001_ValidateForeignPlayersInTeam@2c34f934]" name="validateTeamToHaveOnly4Foreigners" duration-ms="1" started-at="2022-09-03T15:24:51Z" depends-on-methods="com.rcbteam.runners.TC_000_ValidateTeamMembers.validateTeamToHave11Members" finished-at="2022-09-03T15:24:51Z">
+        <test-method status="PASS" signature="validateTeamToHaveOnly4Foreigners()[pri:0, instance:com.rcbteam.runners.TC_001_ValidateForeignPlayersInTeam@2c34f934]" name="validateTeamToHaveOnly4Foreigners" duration-ms="0" started-at="2022-09-03T15:35:47Z" depends-on-methods="com.rcbteam.runners.TC_000_ValidateTeamMembers.validateTeamToHave11Members" finished-at="2022-09-03T15:35:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateTeamToHaveOnly4Foreigners -->
