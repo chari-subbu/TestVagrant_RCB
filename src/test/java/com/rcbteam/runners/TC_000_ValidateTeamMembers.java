@@ -10,18 +10,17 @@ import com.rcb.helpers.JsonFileReader;
 public class TC_000_ValidateTeamMembers {
 
 	JSONObject teamInformation = null;
+	JSONArray teamList = null;
 
 	public TC_000_ValidateTeamMembers()
 	{
 		teamInformation = JsonFileReader.getTeamInfo();
+		teamList = (JSONArray) teamInformation.get("player");
 	}
 
 	@Test
 	public void validateTeamToHave11Members()
 	{
-		JSONObject teamInformation = JsonFileReader.getTeamInfo();
-		JSONArray teamList = (JSONArray) teamInformation.get("player");
-
-		Assert.assertTrue(teamList.size()==11);
+		Assert.assertTrue(teamList.size() == 11);
 	}
 }

@@ -1,6 +1,5 @@
 package com.rcbteam.runners;
 
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -13,8 +12,6 @@ public class TC_001_ValidateForeignPlayersInTeam extends TC_000_ValidateTeamMemb
 	@Test(dependsOnMethods= {"validateTeamToHave11Members"})
 	public void validateTeamToHaveOnly4Foreigners()
 	{
-		JSONArray teamList = (JSONArray) teamInformation.get("player");
-
 		int foreignPlayers = 0;
 
 		for(Object teamMember : teamList)
