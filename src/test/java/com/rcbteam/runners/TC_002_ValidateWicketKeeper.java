@@ -28,15 +28,17 @@ public class TC_002_ValidateWicketKeeper extends TC_000_ValidateTeamMembers{
 
 		System.out.println("Wicket Keepers count : "+WicketKeepers);
 
+		int wkTocheck = Integer.valueOf(System.getProperty("wicketkeepers"));
+
 		try
 		{
-			Assert.assertTrue(WicketKeepers >= 1);
+			Assert.assertTrue(WicketKeepers >= wkTocheck);
 		}
 		catch(AssertionError error)
 		{
-			if(WicketKeepers < 1)
+			if(WicketKeepers < wkTocheck)
 			{
-				throw new TeamException("Team is filled with "+WicketKeepers+" wicket keepers, please add atleast one wicket keeper to increase the match winning chances.");
+				throw new TeamException("Team is filled with "+WicketKeepers+" wicket keepers, please add atleast "+wkTocheck+" wicket keeper to increase the match winning chances.");
 			}
 		}
 		catch(Exception excp)

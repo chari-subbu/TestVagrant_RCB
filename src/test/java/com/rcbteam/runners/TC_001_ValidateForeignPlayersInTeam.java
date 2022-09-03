@@ -28,21 +28,23 @@ public class TC_001_ValidateForeignPlayersInTeam extends TC_000_ValidateTeamMemb
 
 		System.out.println("Foreign Players count : "+foreignPlayers);
 
+		int foreignPlayersTocheck = Integer.valueOf(System.getProperty("foreignplayers"));
+
 		try
 		{
-			Assert.assertTrue(foreignPlayers == 4);
+			Assert.assertTrue(foreignPlayers == foreignPlayersTocheck);
 		}
 		catch(AssertionError error)
 		{
-			if(foreignPlayers > 4)
+			if(foreignPlayers > foreignPlayersTocheck)
 			{
-				int removePlayers = foreignPlayers-4;
-				throw new TeamException("Team is filled with "+foreignPlayers+" Foreign players, please remove "+removePlayers +" foreign players to match with 4 foreigns");
+				int removePlayers = foreignPlayers-foreignPlayersTocheck;
+				throw new TeamException("Team is filled with "+foreignPlayers+" Foreign players, please remove "+removePlayers +" foreign players to equal with "+foreignPlayersTocheck+" foreigns");
 			}
 			else
 			{
-				int addPlayers = 4-foreignPlayers;
-				throw new TeamException("Team is filled with "+foreignPlayers+" Foreign players, please add "+addPlayers +" foreign players to match with 4 foreigns");
+				int addPlayers = foreignPlayersTocheck-foreignPlayers;
+				throw new TeamException("Team is filled with "+foreignPlayers+" Foreign players, please add "+addPlayers +" foreign players to equal with "+foreignPlayersTocheck+" foreigns");
 			}
 		}
 		catch(Exception excp)

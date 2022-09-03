@@ -12,11 +12,13 @@ public class TC_000_ValidateTeamMembers {
 	JSONObject teamInformation = null;
 	JSONArray teamList = null;
 
+
 	public TC_000_ValidateTeamMembers()
 	{
 		teamInformation = JsonFileReader.getTeamInfo();
 		teamList = (JSONArray) teamInformation.get("player");
 	}
+
 
 	@Test
 	public void validateTeamToHave11Members()
