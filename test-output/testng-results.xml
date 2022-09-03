@@ -1,17 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="31" started-at="2022-09-03T15:16:13Z" finished-at="2022-09-03T15:16:13Z">
+  <suite name="Suite" duration-ms="38" started-at="2022-09-03T15:18:50Z" finished-at="2022-09-03T15:18:50Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="31" started-at="2022-09-03T15:16:13Z" finished-at="2022-09-03T15:16:13Z">
-      <class name="com.rcbteam.runners.TC_000_ValidateTeamMembers">
-        <test-method status="PASS" signature="validateTeamToHave11Members()[pri:0, instance:com.rcbteam.runners.TC_000_ValidateTeamMembers@7219ec67]" name="validateTeamToHave11Members" duration-ms="10" started-at="2022-09-03T15:16:13Z" finished-at="2022-09-03T15:16:13Z">
+    <test name="Validate4ForeignPlayers" duration-ms="36" started-at="2022-09-03T15:18:50Z" finished-at="2022-09-03T15:18:50Z">
+      <class name="com.rcbteam.runners.TC_001_ValidateForeignPlayersInTeam">
+        <test-method status="PASS" signature="validateTeamToHave11Members()[pri:0, instance:com.rcbteam.runners.TC_001_ValidateForeignPlayersInTeam@65d6b83b]" name="validateTeamToHave11Members" duration-ms="11" started-at="2022-09-03T15:18:50Z" finished-at="2022-09-03T15:18:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateTeamToHave11Members -->
-      </class> <!-- com.rcbteam.runners.TC_000_ValidateTeamMembers -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        <test-method status="PASS" signature="validateTeamToHaveOnly4Foreigners()[pri:0, instance:com.rcbteam.runners.TC_001_ValidateForeignPlayersInTeam@65d6b83b]" name="validateTeamToHaveOnly4Foreigners" duration-ms="2" started-at="2022-09-03T15:18:50Z" depends-on-methods="com.rcbteam.runners.TC_000_ValidateTeamMembers.validateTeamToHave11Members" finished-at="2022-09-03T15:18:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateTeamToHaveOnly4Foreigners -->
+      </class> <!-- com.rcbteam.runners.TC_001_ValidateForeignPlayersInTeam -->
+    </test> <!-- Validate4ForeignPlayers -->
+    <test name="ValidateAtleastOneWicketKeeper" duration-ms="38" started-at="2022-09-03T15:18:50Z" finished-at="2022-09-03T15:18:50Z">
+      <class name="com.rcbteam.runners.TC_002_ValidateWicketKeeper">
+        <test-method status="PASS" signature="validateTeamToHave11Members()[pri:0, instance:com.rcbteam.runners.TC_002_ValidateWicketKeeper@71b1176b]" name="validateTeamToHave11Members" duration-ms="11" started-at="2022-09-03T15:18:50Z" finished-at="2022-09-03T15:18:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateTeamToHave11Members -->
+        <test-method status="PASS" signature="validateTeamAtlease1WicketKeeper()[pri:0, instance:com.rcbteam.runners.TC_002_ValidateWicketKeeper@71b1176b]" name="validateTeamAtlease1WicketKeeper" duration-ms="2" started-at="2022-09-03T15:18:50Z" depends-on-methods="com.rcbteam.runners.TC_000_ValidateTeamMembers.validateTeamToHave11Members" finished-at="2022-09-03T15:18:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateTeamAtlease1WicketKeeper -->
+      </class> <!-- com.rcbteam.runners.TC_002_ValidateWicketKeeper -->
+    </test> <!-- ValidateAtleastOneWicketKeeper -->
+  </suite> <!-- Suite -->
 </testng-results>
